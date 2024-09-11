@@ -46,14 +46,19 @@ sequenceDiagram
 
 ### Key features
 
-- Secure login over HTTPS
-- Ability to select the question to decide
-- Display of choices
-- Ability to select, and change, top three choices
-- Totals from all users displayed in realtime
-- Ability for a user to lock in their top three
-- Results are persistently stored
-- Ability for admin to create and delete questions
+- Secure Login over HTTPS: Ensures that only authorized users can access the system, protecting sensitive data and functionality.
+
+- Inventory Management: The Home page provides a list of inventory items, allowing users to view available devices and equipment.
+
+- Job Management: Users can view a list of available jobs and tasks, helping them understand the work that needs to be completed.
+
+- Team Member Overview: Displays a list of users who are currently logged in, facilitating better team coordination.
+
+- Real-Time Chat: Includes a simple chat feature for team members to assign tasks, communicate responsibilities, and collaborate on job assignments.
+
+- Add Devices: Provides a form for users to add new devices and equipment to the inventory, ensuring that the inventory is always up-to-date.
+
+- Admin Functionality: Allows administrators to manage the inventory by adding or removing devices and overseeing the job listings.
 
 ### Technologies
 
