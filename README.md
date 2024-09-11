@@ -62,20 +62,21 @@ I am going to use the required technologies in the following ways.
 - **HTML** - Uses correct HTML structure for application. 3 HTML pages. One for login and one to show inventory and jobs and one for adding devices to inventory. Hyperlinks to choice artifact.
 - **CSS** - Application styling that looks good on different screen sizes, uses good whitespace, color choice and contrast.
 - **React** -
-Login: React will handle user authentication, dynamically displaying error messages or confirmations.
-Inventory & Job Display: React components will be used to dynamically load the list of jobs and inventory items. These components will allow users to view, filter, and interact with jobs and inventory in real-time.
-Chat & Team View: A React component will show a list of signed-in users and allow team members to chat, assign tasks, and collaborate within the app.
-Routing: React Router will manage navigation between the Login, Home, and Add pages, ensuring a smooth user experience
+  - Login: React will handle user authentication, dynamically displaying error messages or confirmations.
+  - Inventory & Job Display: React components will be used to dynamically load the list of jobs and inventory items. These components will allow users to view, filter, and interact with jobs and inventory in real-time.
+  - Chat & Team View: A React component will show a list of signed-in users and allow team members to chat, assign tasks, and collaborate within the app.
+  - Routing: React Router will manage navigation between the Login, Home, and Add pages, ensuring a smooth user experience
 - **Service** - Backend service with endpoints for:
   - Login Endpoint: Handles user authentication and ensures access control.
   - Get Inventory/Jobs Endpoint: Retrieves the latest job listings and inventory details for display on the Home page.
   - Add Device Endpoint: Accepts form submissions from the Add page to update the inventory with new devices.
   - Chat & User List Endpoint: Fetches and updates the list of signed-in users and manages real-time chat functionality.
 - **DB/Login** - A secure database will store user credentials, job data, and inventory information.
-User Registration & Login: User data (e.g., credentials) will be securely stored and managed in the database, ensuring only authenticated users can log in and interact with the system.
-Inventory and Jobs Storage: All inventory items and job tasks will be stored in the database, enabling the application to easily retrieve and update records as needed.
-- **WebSocket** - Chat Feature: The chat component will use WebSockets to provide real-time communication between users, enabling them to discuss tasks and assignments without needing to refresh the page.
-User Presence Updates: WebSockets will also be used to broadcast which users are currently signed in or active on the website.
+  - User Registration & Login: User data (e.g., credentials) will be securely stored and managed in the database, ensuring only authenticated users can log in and interact with the system.
+  - Inventory and Jobs Storage: All inventory items and job tasks will be stored in the database, enabling the application to easily retrieve and update records as needed.
+- **WebSocket** -
+  - Chat Feature: The chat component will use WebSockets to provide real-time communication between users, enabling them to discuss tasks and assignments without needing to refresh the page.
+  - User Presence Updates: WebSockets will also be used to broadcast which users are currently signed in or active on the website.
 
 ## HTML deliverable
 
