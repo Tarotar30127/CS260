@@ -1,9 +1,6 @@
 # Jobs&Inventory
 
-Jobs & Inventory is a simple yet powerful web application designed to help companies efficiently manage their resources and job assignments in one centralized platform. It simplifies the process of tracking company devices, tools, and equipment while also monitoring active projects and job statuses. By providing a real-time view of both inventory and operations, Jobs & Inventory ensures that businesses track their inventory devices while manging efficency.
-
-## Specification Deliverable
-
+Jobs & Inventory is a simple yet powerful web application designed to help companies efficiently manage their resources and job assignments in one centralized platform. It simplifies the process of tracking company devices, tools, and equipment while also monitoring active projects and job statuses. By providing a real-time view of both inventory and operations, Jobs & Inventory ensures that businesses track their inventory devices while managing efficency.
 
 ### Elevator pitch
 
@@ -11,23 +8,29 @@ Managing company assets and job assignments can quickly become a logistical nigh
 
 ### Design
 
+The website will consist of three primary pages: Login, Home, and Add. Each page serves distinct functionalities:
+
+    Login Page: This page ensures the security of the website by requiring users to authenticate before gaining access. Below the sign-in form, an API will display inspirational quotes from church leaders, reminding users of the values and mission they represent.
+
+    Home Page: The central hub of the site. On the left side, users will find an inventory list, while the middle section will display a list of available jobs. The right side will feature an overview of who is currently signed in (team members) and include a simple chat function for team collaboration. This chat feature will allow users to assign tasks, communicate responsibilities, and coordinate efforts in real-time.
+
+    Add Page: This page provides a form for users to add new devices and equipment to the inventory, allowing for easy updates and accurate tracking of resources. 
+    
 ![Mock](Jobs&Inventory-Login.jpg)
 ![Mock](Jobs&Inventory-HomePage.jpg)
 ![Mock](Jobs&Inventory-AddPage.jpg)
 
-Here is a sequence diagram that shows how to people would interact with the backend to vote.
+Here is a sequence diagram that shows how to people would interact with the backend to add devices to inventory.
 
 ```mermaid
 sequenceDiagram
-    actor Alice
-    actor Juan
-    actor Bud
-    Alice->>Server: Bud + 1
-    Server -->>Juan: Bud + 1
-    Server -->>Bud: Bud + 1
-    Juan->>Server: Alice + 1
-    Server -->>Bud: Alice + 1
-    Server -->>Alice: Alice + 1
+    actor Alice as User
+    actor Server as Backend Server
+    Alice->>Server: Submit device details via form
+    Server-->>Alice: Confirm device added to inventory
+    actor Juan as User
+    Juan->>Server: Submit device details via form
+    Server-->>Juan: Confirm device added to inventory
 ```
 
 ### Key features
