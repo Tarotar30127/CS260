@@ -16,9 +16,9 @@ The website will consist of three primary pages: Login, Home, and Add. Each page
 
     Add Page: This page provides a form for users to add new devices and equipment to the inventory, allowing for easy updates and accurate tracking of resources. 
     
-![Mock](Jobs&Inventory-Login.jpg)
-![Mock](Jobs&Inventory-HomePage.jpg)
-![Mock](Jobs&Inventory-AddPage.jpg)
+![Mock - Login Page](./images/Jobs&Inventory-Login.jpg)
+![Mock - Home Page](./images/Jobs&Inventory-HomePage.jpg)
+![Mock - Add Page](./images/Jobs&Inventory-AddPage.jpg)
 
 Here is a sequence diagram that shows how to people would interact with the backend to add devices to inventory.
 
