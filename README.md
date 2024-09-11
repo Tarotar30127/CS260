@@ -11,7 +11,9 @@ Managing company assets and job assignments can quickly become a logistical nigh
 
 ### Design
 
-![Mock](voterMockUI.jpg)
+![Mock](Jobs&Inventory-Login.jpg)
+![Mock](Jobs&Inventory-HomePage.jpg)
+![Mock](Jobs&Inventory-AddPage.jpg)
 
 Here is a sequence diagram that shows how to people would interact with the backend to vote.
 
