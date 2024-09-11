@@ -19,9 +19,8 @@ The website will consist of three primary pages: Login, Home, and Add. Each page
 ### Mock Drawings
 
 #### Login Page
-    ### Design
 
-![Mock](voterMockUI.jpg)
+![Mock](JobsInventoryLoginPage.jpg)
 
 #### Home Page
 #### Add Page
