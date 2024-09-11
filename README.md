@@ -19,11 +19,9 @@ The website will consist of three primary pages: Login, Home, and Add. Each page
 ### Mock Drawings
 
 #### Login Page
-    ![Mock](JobsInventoryLoginPage.png)
+    ![Mock](JobInventoryLoginPage.png)
 #### Home Page
-    ![Mock](JobsInventoryHomePage.png)
 #### Add Page
-    ![Mock](JobsInventoryAddPage.png)
 
 Here is a sequence diagram that shows how to people would interact with the backend to add devices to inventory.
 
