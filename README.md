@@ -10,15 +10,17 @@ Managing company assets and job assignments can quickly become a logistical nigh
 
 The website will consist of three primary pages: Login, Home, and Add. Each page serves distinct functionalities:
 
-    Login Page: This page ensures the security of the website by requiring users to authenticate before gaining access. Below the sign-in form, an API will display inspirational quotes from church leaders, reminding users of the values and mission they represent.
-
-    Home Page: The central hub of the site. On the left side, users will find an inventory list, while the middle section will display a list of available jobs. The right side will feature an overview of who is currently signed in (team members) and include a simple chat function for team collaboration. This chat feature will allow users to assign tasks, communicate responsibilities, and coordinate efforts in real-time.
-
-    Add Page: This page provides a form for users to add new devices and equipment to the inventory, allowing for easy updates and accurate tracking of resources. 
+    ####Login Page: This page ensures the security of the website by requiring users to authenticate before gaining access. Below the sign-in form, an API will display inspirational quotes from church leaders, reminding users of the values and mission they represent.
     
-![Mock](JobsInventoryLoginPage.png)
-![Mock](JobsInventoryHomePage.png)
-![Mock](JobsInventoryAddPage.png)
+    ![Mock](JobsInventoryLoginPage.png)
+
+    ####Home Page: The central hub of the site. On the left side, users will find an inventory list, while the middle section will display a list of available jobs. The right side will feature an overview of who is currently signed in (team members) and include a simple chat function for team collaboration. This chat feature will allow users to assign tasks, communicate responsibilities, and coordinate efforts in real-time.
+
+    ![Mock](JobsInventoryHomePage.png)
+
+    ####Add Page: This page provides a form for users to add new devices and equipment to the inventory, allowing for easy updates and accurate tracking of resources. 
+    
+    ![Mock](JobsInventoryAddPage.png)
 
 Here is a sequence diagram that shows how to people would interact with the backend to add devices to inventory.
 
