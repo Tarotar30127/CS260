@@ -1,1 +1,5 @@
-Lots of things to do 
+Git commit 
+Git push
+
+git commit --amend
+git commit -a
