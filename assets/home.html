@@ -13,7 +13,6 @@
 
       <!-- Navigation elements -->
       <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
         <menu>
           <li><a href="../index.html">Login</a></li>
           <li><a href="home.html">Home</a></li>
@@ -23,3 +22,100 @@
       </nav>
       <hr />
     </header>
+
+    <main>
+        <!-- Inventory List -->
+        <div class="inventory"> 
+            <h2>Inventory List</h2>
+            <table>
+                <thead> <!-- Correct tag for table head -->
+                    <tr>
+                        <th>Item</th>
+                        <th>ICN</th>
+                        <th>Client</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Macbook</td>
+                        <td>1-130485</td>
+                        <td>Conner</td>
+                    </tr>
+                    <tr>
+                        <td>Mac Air</td>
+                        <td>1-130486</td>
+                        <td>Ron</td>
+                    </tr>
+                    <tr>
+                        <td>Macbook</td>
+                        <td>1-130487</td>
+                        <td>Bob</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Jobs Section -->
+        <div class="jobs">
+            <h2>Current Jobs</h2>
+            <ul class="jobs-list">
+                <li class="job">
+                    <div class="job-title">
+                        Help Professor Joe with Printer
+                    </div>
+                    <div class="job-description">
+                        Printer ran out of toner
+                    </div>
+                </li>
+                <li class="job">
+                    <div class="job-title">
+                        Add software to lab 091
+                    </div>
+                    <div class="job-description">
+                        Class facepager
+                    </div>
+                </li>
+                <li class="job">
+                    <div class="job-title">
+                        Add new employee
+                    </div>
+                    <div class="job-description">
+                        Needs access to emails
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Team Members Section -->
+        <div class="team-members">
+            <h2>Team Members</h2>
+            <ul>
+                <li class="team-member">
+                    <span class="status-dot"></span>
+                    <span>Member 1</span>
+                </li>
+                <li class="team-member">
+                    <span class="status-dot"></span>
+                    <span>Member 2</span>
+                </li>
+                <li class="team-member">
+                    <span class="status-dot"></span>
+                    <span>Member 3</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="chat">
+            <h2>Chat</h2>
+            <div class="chatbox" id="chatbox">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div class="chat-input">
+                <!-- Chat input box -->
+            </div>
+        </div>
+    </main>
+
+  </body>
+</html>
