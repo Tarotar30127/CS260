@@ -23,11 +23,11 @@ Add Page: This page provides a form for users to add new devices and equipment t
 
 #### Home Page
 
-![Mock](assests/img/JobsInventoryHomePage.png)
+![Mock](assets/img/JobsInventoryHomePage.png)
 
 #### Add Page
 
-![Mock](assests/img/JobsInventoryAddPage.png)
+![Mock](assets/img/JobsInventoryAddPage.png)
 
 
 
