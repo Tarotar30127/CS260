@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job&Inventory</title>
     <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../css/about.css" />
+
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
@@ -24,36 +26,37 @@
       <hr />
     </header>
     <main>
-        <div>
-        <h2>Team Members</h2>
-        <ul>
-            <li class="team-member">
-                <span class="status-dot"></span>
-                <span>Member 1</span>
-            </li>
-            <li class="team-member">
-                <span class="status-dot"></span>
-                <span>Member 2</span>
-            </li>
-            <li class="team-member">
-                <span class="status-dot"></span>
-                <span>Member 3</span>
-            </li>
-        </ul>
-    </div>
-
-    <div>
-        <h2>Chat</h2>
-        <div class="chatbox" id="chatbox">
-
+        <div class="right-side-container">
+            <!-- Team Members Section -->
+            <div class="team-members">
+                <h2>Team Members</h2>
+                <ul>
+                    <li class="team-member">
+                        <div class="status-dot"></div>
+                        <span>Member 1</span>
+                    </li>
+                    <li class="team-member">
+                        <div class="status-dot"></div>
+                        <span>Member 2</span>
+                    </li>
+                    <li class="team-member">
+                        <div class="status-dot"></div>
+                        <span>Member 3</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Chat Section -->
+            <div class="chat-box">
+                <h2>Chat</h2>
+                <ul>
+                    <li class="message"><span>Member 1:</span> Hello!</li>
+                    <li class="message"><span>Member 2:</span> Hi there!</li>
+                </ul>
+            </div>
         </div>
-        <div class="chat-input">
-        </div>
-    </div>
 
-    <header>
-        <h1>About Us</h1>
-    </header>
+    <h1>About Us</h1>
     <div id="picture" class="picture-box">
         <img width="400px" src="img/Hawaii.jpg" alt="random" />
     </div>

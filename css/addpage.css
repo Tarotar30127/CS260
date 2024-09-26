@@ -1,0 +1,276 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+    min-height: 100vh; /* Ensure body stretches to full height */
+    margin: 0; /* Remove default margin */
+    background-color: #fcf8f3; /* Super light warm background */
+}
+
+header {
+    flex: 0 0 80px; /* Fix the height to 80px */
+    background-color: #db996c; /* Light tan background for visibility */
+    padding: 5px;
+    display: flex;
+    justify-content: space-between; /* Spread the content to the edges */
+    align-items: center; /* Vertically center items */
+    border-bottom: 2px solid #6e7da2; /* Border with a soft contrast */
+    box-shadow: 0 2px 4px #6e7da2;
+}
+
+main {
+    flex: 1; /* Take up the remaining height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; /* Evenly space the content */
+    padding: 20px; /* Increased padding for better layout */
+}
+
+main h1 {
+    font-size: 3rem; /* Makes the heading larger */
+    margin-bottom: 5px; /* Optional: Add space below for better layout */
+    border-bottom: 2px solid #6e7da2;
+}
+
+footer {
+    flex: 0 0 30px; /* Fix the height to 30px */
+    background-color: #aedadd;
+    text-align: right;
+    padding: 5px;
+    display: flex; /* Apply flexbox */
+    justify-content: space-between; /* Spread items across the footer */
+    align-items: center; /* Center content vertically */
+}
+
+footer span {
+    margin-left: 10px; /* Add some space to the left of the text */
+    padding: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000000;
+    margin-right: 10px; /* Add some space to the right of the link */
+}
+
+menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto; /* Push the menu to the right */
+}
+
+menu li {
+    margin: 0 0.5em;
+}
+
+menu li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Right-side floating container for Team Members and Chat */
+.right-side-container {
+    position: fixed; /* Fix it on the right side of the screen */
+    top: 20px; /* Some spacing from the top */
+    right: 10px; /* Some spacing from the right edge */
+    background-color: #ffffff; /* White background for visibility */
+    padding: 20px; /* Padding around the content */
+    border: 2px solid #ccc; /* Light border around the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    z-index: 999; /* Ensure it stays above other content */
+    width: 300px; /* Fixed width for the container */
+    max-height: 80vh; /* Limit height to the viewport height */
+    overflow-y: auto; /* Allow scrolling if content is too long */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inside the container: Team Members list */
+.team-members {
+    margin-bottom: 20px;
+}
+
+.team-members h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.team-members ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.team-members .team-member {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.team-members .status-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #4caf50; /* Green dot for active status */
+    margin-right: 10px;
+}
+
+/* Chat Box Style */
+.chat-box {
+    background-color: #f5f5f5; /* Slightly different background for the chat */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.chat-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.chat-box .message {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.chat-box .message span {
+    font-weight: bold;
+}
+
+/* Media Query to hide right-side container on small screens */
+@media (max-width: 700px) {
+    .right-side-container {
+        display: none; /* Hide the container on smaller screens */
+    }
+}
+
+.content {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px; /* Add more padding to make the form bigger */
+    background-color: #ffffff; /* Add a white background */
+    border: 2px solid #ccc; /* Add a light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    width: 100%; /* Take full width */
+    max-width: 500px; /* Increase the form size */
+  }
+  
+  form div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Reduce spacing between input fields */
+  }
+  
+  form span {
+    margin-right: 10px;
+    font-size: 1.7em; /* Make the icons slightly larger */
+  }
+  
+  form input {
+    padding: 15px; /* Keep the padding size for input fields */
+    font-size: 1.6em; /* Make input text bigger */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Make input fields full width */
+  }
+  
+  button {
+    padding: 15px 30px; /* Increase button padding */
+    font-size: 1.5em; /* Make button text larger */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  footer {
+    flex: 0 0 30px; /* Fix the height to 30px */
+    background-color: #aedadd;
+    text-align: right;
+    padding: 5px;
+  }
+  
+  menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto; /* Push the menu to the right */
+  }
+
+@media (max-width: 500px) {
+    body, main {
+        min-width: 100%; /* Allow body to adjust to screen width */
+        min-height: 100vh; /* Ensure body and main have a minimum height of the viewport */
+    }
+
+    form {
+        padding: 20px; /* Smaller form padding on small screens */
+        width: 100%; /* Full width for the form */
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 12px; /* Smaller footer text */
+    }
+
+    header {
+        flex: 0 0 60px; /* Smaller header height */
+    }
+
+    main {
+        padding: 5px; /* Reduced padding */
+    }
+}
+
+@media (orientation: portrait) {
+    main {
+        flex-direction: column; /* Stacks elements vertically in portrait mode */
+    }
+}
+
+@media (max-height: 500px) {
+    header {
+        display: none; /* Hides header on very small screens */
+    }
+    footer {
+        display: none; /* Hides footer on very small screens */
+    }
+
+    body, main {
+        min-height: 100vh; /* Ensure the body and main have at least full screen height */
+    }
+}
