@@ -92,7 +92,7 @@ I am going to use the required technologies in the following ways.
 - [x] **Text** Wrote in my about page about Jobs&Inventory
 - [ ] **Images** I added a picture of Hawaii to my about page because I am from Hawaii
 - [ ] **DB/Login** I created a login page with the form however it doesn't work not linked to the database
-- [ ] **WebSocket** The website is linked to jobsiventoryidea.com that works.
+- [ ] **WebSocket** Using Caddy linked to domain jobsiventoryidea.com hosted on AWS
 
 ## CSS deliverable
 
