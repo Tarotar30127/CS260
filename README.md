@@ -92,7 +92,7 @@ I am going to use the required technologies in the following ways.
 - [x] **Text** Wrote in my about page about Jobs&Inventory
 - [x] **Images** I added a picture of Hawaii to my about page because I am from Hawaii
 - [x] **DB/Login** I created a login page with the form however it doesn't work not linked to the database
-- [x] **WebSocket** Using Caddy linked to domain jobsiventoryidea.com hosted on AWS
+- [x] **WebSocket** I have a chatroom where team members can work together and in real time communicate with each other and other users can see who is on the page.
 - [x] **API** On my about page I have a quote section that acts as my placeholder that I will link to a qoute API and that will display inspirational qoute to uplift 
 
 ## CSS deliverable
