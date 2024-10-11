@@ -90,9 +90,10 @@ I am going to use the required technologies in the following ways.
 - [x] **HTML pages** Built 3 pages called Login, Home, Add Page, and about
 - [x] **Links** Created a link to my github page and linked all pages 
 - [x] **Text** Wrote in my about page about Jobs&Inventory
-- [ ] **Images** I added a picture of Hawaii to my about page because I am from Hawaii
-- [ ] **DB/Login** I created a login page with the form however it doesn't work not linked to the database
-- [ ] **WebSocket** Using Caddy linked to domain jobsiventoryidea.com hosted on AWS
+- [x] **Images** I added a picture of Hawaii to my about page because I am from Hawaii
+- [x] **DB/Login** I created a login page with the form however it doesn't work not linked to the database
+- [x] **WebSocket** Using Caddy linked to domain jobsiventoryidea.com hosted on AWS
+- [x] **API** On my about page I have a quote section that acts as my placeholder that I will link to a qoute API and that will display inspirational qoute to uplift 
 
 ## CSS deliverable
 
