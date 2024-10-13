@@ -78,6 +78,19 @@ ul {
     margin-left: 0;
 }
 
+#picture {
+    display: flex; /* Optional: to center the image inside the div */
+    justify-content: center; /* Optional: horizontally centers the image */
+    align-items: center; /* Optional: vertically centers the image */
+    max-width: 100%; /* Ensures the container doesn't exceed its parent width */
+}
+
+#picture img {
+    width: 100%; /* Makes the image take up 100% of the container's width */
+    height: auto; /* Maintains the aspect ratio of the image */
+    max-width: 400px; /* Ensures the image doesn't exceed 400px in width */
+}
+
 /* Right-side floating container for Team Members and Chat */
 .right-side-container {
     position: fixed; /* Fix it on the right side of the screen */
