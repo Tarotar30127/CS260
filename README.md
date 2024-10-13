@@ -98,12 +98,12 @@ I am going to use the required technologies in the following ways.
 ## CSS deliverable
 
 
-- [ ] **Header, footer, and main content body**
-- [ ] **Navigation elements** 
-- [ ] **Responsive to window resizing** 
-- [ ] **Application elements** 
-- [ ] **Application text content** 
-- [ ] **Application images** 
+- [x] **Header, footer, and main content body**  Flexbox to position navigation and content, ensuring it stays fixed in height and adapts across screen sizes and added a color palette ![Color Palette](https://palettes.shecodes.io/palettes/766)
+- [x] **Navigation elements** Styled navigation links with Flexbox, ensuring they align properly, and used media queries to adapt to smaller screens and consistant across all pages
+- [x] **Responsive to window resizing** Implemented media queries to adjust layout properties like font size, padding, and width to make the design responsive.
+- [x] **Application elements** Styled content containers like inventory and job lists with Flexbox, borders, and shadows for visual separation, while using responsive widths.
+- [x] **Application text content** Styled text elements with font-size, spacing, and color to ensure readability and alignment within their containers.
+- [x] **Application images** Set responsive image rules in about.css using max-width and height properties to ensure images scale correctly in different screen sizes
 
 ## React deliverable
 
