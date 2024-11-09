@@ -1,53 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="/icons8-ice-96.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
     <title>Job&Inventory</title>
-    <link rel="icon" href="favicon.ico" />
-
-    <link rel="stylesheet" href="css/index.css" />
-
   </head>
   <body>
-    <!-- Use header, main, and footer elements to give semantic structure -->
-    <header>
-      <h1>Job&Inventory<sup>&reg;</sup></h1>
-
-      <!-- Navigation elements -->
-      <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
-          <li><a href="index.html">Login</a></li>
-          <li><a href="assets/home.html">Home</a></li>
-          <li><a href="assets/addPage.html">Add</a></li>
-          <li><a href="assets/about.html">About</a></li>
-        </menu>
-      </nav>
-      <hr />
-    </header>
-
-    <main>
-      <h1>Welcome to Job&Inventory</h1>
-      <form method="get" action="assets/home.html">
-        <div>
-          <span>@</span>
-          <input type="text" placeholder="your@email.com" />
-        </div>
-        <div>
-          <span>🔒</span>
-          <input type="password" placeholder="password" />
-        </div>
-        <button type="submit">Login</button>
-        <button type="submit">Create</button>
-      </form>
-    </main>
-
-    <footer>
-      <hr />
-      <span class="text-reset">Carter Lee</span>
-      <br />
-      <a href="https://github.com/Tarotar30127/startup">GitHub</a>
-    </footer>
+    <div id="root"></div>
+    <script type="module" src="/index.jsx"></script>
   </body>
 </html>

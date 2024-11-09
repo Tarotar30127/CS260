@@ -1,0 +1,120 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+  height: 100vh;
+}
+.floating-right-section {
+  position: absolute;
+  top: 50%;       /* Aligns vertically */
+  right: 0;        /* Aligns horizontally to the left */
+  transform: translateY(-50%);
+  width: 20%;     /* Adjust the width as needed */
+  padding: 10px;  /* Optional padding */
+  background-color: #f8f9fa; /* Optional light background for visibility */
+  border: 4px solid black;    /* Optional border */
+}
+
+.team-members,
+.chat-section {
+  margin-bottom: 20px; /* Adds spacing between sections */
+}
+
+header {
+  flex: 0 80px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer {
+  flex: 0 30px;
+}
+
+menu {
+  flex: 1;
+  display: flex;
+  /*  overwrite Bootstrap so the menu does not wrap */
+  flex-direction: row !important;
+  list-style: none;
+}
+
+.navbar-brand {
+  padding-left: 0.3em;
+}
+
+menu .nav-item {
+  padding: 0 0.3em;
+}
+
+footer a {
+  float: right;
+}
+
+@media (max-height: 600px) {
+  header {
+    display: none;
+  }
+  .floating-right-section {
+    display: none; /* Hides the right-side section on very small screens */
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+
+@media (orientation: portrait) {
+  main {
+    flex-direction: column; /* Stacks elements vertically in portrait mode */
+  }
+}
+
+@media (max-height: 500px) {
+  header {
+    display: none; /* Hides header on very small screens */
+  }
+  footer {
+    display: none; /* Hides footer on very small screens */
+  }
+  
+  body,
+  main {
+    min-height: 100vh; /* Ensure the body and main have at least full screen height */
+  }
+}
+
+@media (max-width: 1000px) {
+  body,
+  main {
+    min-width: 100%; /* Allow body to adjust to screen width */
+    min-height: 100vh; /* Ensure body and main have a minimum height of the viewport */
+  }
+
+  form {
+    padding: 20px; /* Smaller form padding on small screens */
+    width: 100%; /* Full width for the form */
+  }
+  .floating-right-section {
+    display: none; /* Hides the right-side section on very small screens */
+  }
+
+
+  footer {
+    display:none
+  }
+
+  header {
+    display:none
+  }
+
+  main {
+    padding: 5px; /* Reduced padding */
+  }
+}

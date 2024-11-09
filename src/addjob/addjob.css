@@ -1,0 +1,60 @@
+/* Ensure body takes full height and center content with flexbox */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f1f1f1; /* Optional: Adds a background color to the page */
+  }
+  
+  /* Form container styling */
+  .add-job-container {
+    
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  /* Heading styling */
+  .add-job-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Label styling */
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  /* Input and textarea styling */
+  .form-control {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+  }
+  
+
+  /* Button styling */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
