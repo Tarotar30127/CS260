@@ -88,6 +88,11 @@ export function App() {
                 </NavLink>
               </li>
             </menu>
+            {authState === AuthState.Authenticated && (
+              <div className="welcome-message">
+                <span>Welcome, {userName}</span>
+              </div>
+            )}
           </nav>
         </header>
 

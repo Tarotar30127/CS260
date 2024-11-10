@@ -1,22 +1,12 @@
-/* Ensure body takes full height and center content with flexbox */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f1f1f1; /* Optional: Adds a background color to the page */
-  }
-  
-  /* Form container styling */
-  .add-job-container {
-    
-    padding: 20px;
-    background-color: #f8f9fa;
+
+.add-job-container {
+    padding: 40px;
+    background-color: #aedadd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
-  }
+    margin: 0 auto;            /* Centers the form horizontally */
+    max-width: 800px;          /* Limits the maximum width to 800px */
+    }
   
   /* Heading styling */
   .add-job-container h2 {
@@ -34,16 +24,21 @@ body {
   .form-control {
     padding: 10px;
     font-size: 16px;
-    width: 100%;
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 15px;
+    display: block;
+    width: 100%;
   }
   
-
+  /* Styling for textarea */
+  textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
   /* Button styling */
   button[type="submit"] {
-    width: 100%;
     padding: 12px;
     background-color: #007bff;
     color: white;
@@ -52,9 +47,9 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
   }
   
   button[type="submit"]:hover {
     background-color: #0056b3;
   }
-  

@@ -1,3 +1,10 @@
+.welcome-message {
+  margin-left: auto !important;  /* Push the welcome message to the far right */
+  font-size: 1rem !important;  /* Customize the size */
+  font-weight: bold !important;
+  color: black !important; 
+  padding-right: 15px;
+}
 .body {
   display: flex;
   flex-direction: column;
@@ -11,8 +18,9 @@
   transform: translateY(-50%);
   width: 20%;     /* Adjust the width as needed */
   padding: 10px;  /* Optional padding */
-  background-color: #f8f9fa; /* Optional light background for visibility */
-  border: 4px solid black;    /* Optional border */
+  background-color: #aedadd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);    
 }
 
 .team-members,
@@ -24,6 +32,7 @@ header {
   flex: 0 80px;
 }
 
+
 main {
   flex: 1;
   display: flex;
@@ -33,9 +42,13 @@ main {
 }
 
 footer {
-  flex: 0 30px;
+  flex-shrink: 0;  /* Prevent footer from shrinking */
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: right; /* Centers text in footer */
 }
-
 menu {
   flex: 1;
   display: flex;

@@ -107,14 +107,14 @@ I am going to use the required technologies in the following ways.
 
 ## React deliverable
 
-- [ ] **Bundled and transpiled** 
-- [ ] **Components** 
-  - [ ] **login** 
-  - [ ] **database** 
-  - [ ] **WebSocket**
-  - [ ] **application logic** 
-- [ ] **Router** 
-- [ ] **Hooks** 
+- [x] **Bundled and transpiled** I used Vite as a bundler to compile my React code, along with other assets, into a production-ready format for deployment.
+- [x] **Components** I structured my app into reusable components like Login, Home, and Authenticated to manage the different parts of the UI and their functionality
+  - [x] **login** Login component handles user authentication by accepting username and password inputs and managing the transition between logged in and logged out states.
+  - [x] **database** I store user data in localStorage so that when a user logs in, their userName is persisted and passed down to components as needed.
+  - [x] **WebSocket** I simulate real-time behavior in the chat feature by updating messages and active users periodically, mimicking WebSocket-like functionality.
+  - [x] **application logic** I use functions like onLogin, onAuthChange, and setUserName to control the flow of authentication and manage UI changes based on whether the user is logged in or not.
+- [x] **Router**  I implemented React Router to handle navigation between different views in my website, such as Home, Add, and About, using NavLink and Route components.
+- [x] **Hooks** I utilized React hooks like useState to manage state (for example, userName and authState) and useEffect to handle side effects, like updating the list of active users at regular intervals.
 
 ## Service deliverable
 

@@ -15,39 +15,50 @@ export function Add({ onAddItem }) {
   };
 
   return (
-    <div>
-      <h2>Add Inventory Item</h2>
-      <form onSubmit={handleAddInventory}>
-        <input
-          type="text"
-          placeholder="Item"
-          value={newInventoryItem.item}
-          onChange={(e) =>
-            setNewInventoryItem({ ...newInventoryItem, item: e.target.value })
-          }
-          required
-        />
-        <input
-          type="text"
-          placeholder="ICN"
-          value={newInventoryItem.icn}
-          onChange={(e) =>
-            setNewInventoryItem({ ...newInventoryItem, icn: e.target.value })
-          }
-          required
-        />
-        <input
-          type="text"
-          placeholder="Client"
-          value={newInventoryItem.client}
-          onChange={(e) =>
-            setNewInventoryItem({ ...newInventoryItem, client: e.target.value })
-          }
-          required
-        />
-        <button type="submit">Add Item</button>
-      </form>
-    </div>
+    <main>
+      <div className="add-inventory-container">
+        <h2>Add Inventory Item</h2>
+        <form onSubmit={handleAddInventory}>
+          <label htmlFor="item">Item:</label>
+          <input
+            id="item"
+            type="text"
+            placeholder="Item"
+            value={newInventoryItem.item}
+            onChange={(e) =>
+              setNewInventoryItem({ ...newInventoryItem, item: e.target.value })
+            }
+            required
+            className="form-control"
+          />
+          <label htmlFor="icn">ICN:</label>
+          <input
+            id="icn"
+            type="text"
+            placeholder="ICN"
+            value={newInventoryItem.icn}
+            onChange={(e) =>
+              setNewInventoryItem({ ...newInventoryItem, icn: e.target.value })
+            }
+            required
+            className="form-control"
+          />
+          <label htmlFor="client">Client:</label>
+          <input
+            id="client"
+            type="text"
+            placeholder="Client"
+            value={newInventoryItem.client}
+            onChange={(e) =>
+              setNewInventoryItem({ ...newInventoryItem, client: e.target.value })
+            }
+            required
+            className="form-control"
+          />
+          <button type="submit">Add Item</button>
+        </form>
+      </div>
+    </main>
   );
 };
 
