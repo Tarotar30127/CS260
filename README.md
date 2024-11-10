@@ -19,15 +19,15 @@ Add Page: This page provides a form for users to add new devices and equipment t
 
 #### Login Page
 
-![Mock](assets/JobsInventoryLoginPage.png)
+![Mock](public/JobsInventoryLoginPage.png)
 
 #### Home Page
 
-![Mock](assets/JobsInventoryHomePage.png)
+![Mock](public/JobsInventoryHomePage.png)
 
 #### Add Page
 
-![Mock](assets/JobsInventoryAddPage.png)
+![Mock](public/JobsInventoryAddPage.png)
 
 
 
