@@ -119,11 +119,11 @@ I am going to use the required technologies in the following ways.
 ## Service deliverable
 
 
-- [ ] **Node.js/Express HTTP service** 
-- [ ] **Static middleware for frontend** 
-- [ ] **Calls to third party endpoints**
-- [ ] **Backend service endpoints** 
-- [ ] **Frontend calls service endpoints** 
+- [x] **Node.js/Express HTTP service** I used Express middleware to serve static files, such as HTML, CSS, and JavaScript, directly from a directory in the backend. For example, app.use(express.static('public')) serves the frontend files located in the public directory, making them accessible at the root URL.
+- [x] **Static middleware for frontend** My backend makes HTTP requests to third-party APIs for various functionalities, such as fetching data or interacting with external services. I have a chat section that uses API
+- [x] **Calls to third party endpoints** My backend makes HTTP requests to third-party APIs for various functionalities, such as fetching data or interacting with external services. I have an external API quote that I call in my about page
+- [x] **Backend service endpoints**  I have service endpoints in the backend to handle requests such as authentication, fetching active users, and managing inventory. For example, the endpoint apiRouter.get('/users/active', (_req, res) => { res.json(activeUsers); }) returns the list of active users stored in memory.
+- [x] **Frontend calls service endpoints** I used fetch() to call backend API endpoints to fetch or send data dynamically. For example, in the ChatAndUsers component, I used fetch('/api/users/active') to retrieve and display the list of active users from the backend.
 
 ## DB/Login deliverable
 
