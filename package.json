@@ -2,6 +2,7 @@
   "name": "startup",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Jobs & Inventory is a simple yet powerful web application designed to help companies efficiently manage their resources and job assignments in one centralized platform. It simplifies the process of tracking company devices, tools, and equipment while also monitoring active projects and job statuses. By providing a real-time view of both inventory and operations, Jobs & Inventory ensures that businesses track their inventory devices while managing efficiency.",
   "main": "index.jsx",
   "scripts": {
@@ -26,9 +27,12 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0"
+    "react-router-dom": "^6.28.0",
+    "uuid": "^11.0.3"
   }
 }

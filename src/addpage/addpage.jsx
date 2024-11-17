@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './addpage.css';
 
-export function Add({ onAddItem }) {
+export function Add() {
   const [newInventoryItem, setNewInventoryItem] = useState({
     item: '',
     icn: '',
@@ -10,8 +10,20 @@ export function Add({ onAddItem }) {
 
   const handleAddInventory = (e) => {
     e.preventDefault();
-    onAddItem(newInventoryItem); // Pass the new item to the parent component
-    setNewInventoryItem({ item: '', icn: '', client: '' }); // Reset form
+
+    fetch('/api/inventory', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newInventoryItem),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Inventory item added:', data);
+        setNewInventoryItem({ item: '', icn: '', client: '' }); // Reset inventory form
+      })
+      .catch((error) => console.error('Error adding inventory item:', error));
   };
 
   return (
@@ -19,9 +31,9 @@ export function Add({ onAddItem }) {
       <div className="add-inventory-container">
         <h2>Add Inventory Item</h2>
         <form onSubmit={handleAddInventory}>
-          <label htmlFor="item">Item:</label>
+          <label htmlFor="inventory-item">Item:</label>
           <input
-            id="item"
+            id="inventory-item"
             type="text"
             placeholder="Item"
             value={newInventoryItem.item}
@@ -31,9 +43,9 @@ export function Add({ onAddItem }) {
             required
             className="form-control"
           />
-          <label htmlFor="icn">ICN:</label>
+          <label htmlFor="inventory-icn">ICN:</label>
           <input
-            id="icn"
+            id="inventory-icn"
             type="text"
             placeholder="ICN"
             value={newInventoryItem.icn}
@@ -43,9 +55,9 @@ export function Add({ onAddItem }) {
             required
             className="form-control"
           />
-          <label htmlFor="client">Client:</label>
+          <label htmlFor="inventory-client">Client:</label>
           <input
-            id="client"
+            id="inventory-client"
             type="text"
             placeholder="Client"
             value={newInventoryItem.client}
@@ -60,6 +72,4 @@ export function Add({ onAddItem }) {
       </div>
     </main>
   );
-};
-
-
+}
