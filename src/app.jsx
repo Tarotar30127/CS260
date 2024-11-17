@@ -85,6 +85,15 @@ export function App() {
 
         {authState === AuthState.Authenticated && <ChatAndUsers userName={userName} />}
       </div>
+
+      <footer className='bg-gray-300 text-dark text-muted'>
+          <div className='container-fluid'>
+            <span className='text-reset text-right'>Carter Lee</span>
+            <a className='text-reset text-right' href='https://github.com/Tarotar30127/startup'>
+              Source
+            </a>
+          </div>
+      </footer>
     </BrowserRouter>
   );
 }

@@ -42,11 +42,12 @@ main {
 }
 
 footer {
+  position: fixed;      /* Fixes the footer at the bottom */
+  bottom: 0;            /* Aligns it to the bottom of the viewport */
+  width: 100%;
   flex-shrink: 0;  /* Prevent footer from shrinking */
   padding: 10px;
-  position: relative;
   bottom: 0;
-  width: 100%;
   text-align: right; /* Centers text in footer */
 }
 menu {
