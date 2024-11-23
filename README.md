@@ -128,12 +128,12 @@ I am going to use the required technologies in the following ways.
 ## DB/Login deliverable
 
 
-- [ ] **MongoDB Atlas database created** 
-- [ ] **Stores data in MongoDB** 
-- [ ] **User registration** 
-- [ ] **existing user** 
-- [ ] **Use MongoDB to store credentials** 
-- [ ] **Restricts functionality**
+- [x] **MongoDB Atlas database created** I set up a MongoDB Atlas database, providing a cloud-based storage solution for my job and inventory website. This allows me to store and manage data remotely with ease and scalability.
+- [x] **Stores data in MongoDB** My website interacts with MongoDB to store various data types like user credentials, job details, and inventory items. I used the MongoDB Node.js driver to connect, query, and manipulate the data in the database.
+- [x] **User registration** I implemented a user registration system, allowing new users to create accounts by providing an email and password. The password is securely hashed using argon2 before being stored in MongoDB to ensure user data is protected.
+- [x] **existing user** I created functionality to check if a user already exists by searching for their email in the database. If a user is found, the application can proceed with the login process, verifying the password.
+- [x] **Use MongoDB to store credentials** User credentials, such as email and password hash, are stored in the MongoDB database. The hashed password ensures that the sensitive information is not stored in plain text, increasing security.
+- [x] **Restricts functionality** The application restricts access to certain features based on user authentication. For example, users must be logged in to perform actions like voting or viewing specific job details.
 
 ## WebSocket deliverable
 
