@@ -1,97 +1,81 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export function ChatAndUsers({ userName }) {
-  const [chatMessages, setChatMessages] = React.useState([]);
-  const [newMessage, setNewMessage] = React.useState('');
-  const [activeUsers, setActiveUsers] = React.useState([]);
+  const [newMessage, setNewMessage] = useState('');
+  const socketRef = useRef(null);
+  const chatMessagesRef = useRef([]); // Store messages in memory
 
-  // Handle sending a new chat message
-  const handleSendMessage = async () => {
-    if (newMessage.trim()) {
-      const message = { user: userName, text: newMessage };
-      setChatMessages((prevMessages) => [...prevMessages, message]);
+  // Initialize WebSocket
+  useEffect(() => {
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    socketRef.current = new WebSocket(`${protocol}://${window.location.host}/ws`);
 
-      try {
-        const response = await fetch('/api/chat', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(message),
-        });
-        if (!response.ok) throw new Error('Failed to send message');
-      } catch (error) {
-        console.error('Error sending message:', error);
-      }
+    // Display that we have opened the WebSocket
+    socketRef.current.onopen = () => {
+      appendMsg('system', 'websocket', 'connected');
+    };
 
-      setNewMessage('');
+    // Display messages we receive from our friends
+    socketRef.current.onmessage = (event) => {
+      const chat = JSON.parse(event.data); // Directly parse event.data assuming it's a string
+      appendMsg('friend', chat.name, chat.msg);
+    };
+
+    // If the WebSocket is closed, then disable the interface
+    socketRef.current.onclose = () => {
+      appendMsg('system', 'websocket', 'disconnected');
+    };
+
+    // Cleanup the WebSocket connection when the component is unmounted
+    return () => {
+      socketRef.current.close();
+    };
+  }, []); // Empty dependency array to run only once on mount
+
+  // Send a message over the WebSocket
+  function sendMessage() {
+    if (newMessage) {
+      appendMsg('me', userName, newMessage);
+      socketRef.current.send(JSON.stringify({ name: userName, msg: newMessage }));
+      setNewMessage(''); // Clear input after sending the message
     }
-  };
+  }
 
-  // Fetch active users
-  React.useEffect(() => {
-    const fetchActiveUsers = async () => {
-      try {
-        const response = await fetch('/api/users/active');
-        if (response.ok) {
-          const data = await response.json();
-          setActiveUsers(data);
-        }
-      } catch (error) {
-        console.error('Failed to fetch active users:', error);
-      }
-    };
+  // Create one long list of messages and store in memory
+  function appendMsg(cls, from, msg) {
+    // Store the message in memory
+    chatMessagesRef.current = [
+      { user: from, text: msg },
+      ...chatMessagesRef.current,
+    ];
+    // Manually trigger a re-render by updating the state
+    // This causes the UI to reflect the changes without using `useState` for the messages
+    forceUpdate();
+  }
 
-    fetchActiveUsers();
-  }, []);
-
-  // Fetch chat messages
-  React.useEffect(() => {
-    const fetchChatMessages = async () => {
-      try {
-        const response = await fetch('/api/chat');
-        if (response.ok) {
-          const data = await response.json();
-          setChatMessages(data);
-        }
-      } catch (error) {
-        console.error('Failed to fetch chat messages:', error);
-      }
-    };
-
-    fetchChatMessages();
-  }, []);
+  // Force a re-render by updating an internal state (used to manually trigger re-render)
+  const [, forceUpdate] = useState(0);
 
   return (
     <div className="floating-right-section">
-      {/* Team Members Section */}
-      <div className="team-members">
-        <h2>Team Members</h2>
-        <ul>
-          {activeUsers.map((member, index) => (
-            <li key={index} className="team-member">
-              <div className="status-dot"></div>
-              <span>{member}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
       {/* Chat Section */}
       <div className="chat-section">
         <h2>Chat</h2>
-        <ul>
-          {chatMessages.map((msg, index) => (
+        <ul id="chat-text">
+          {chatMessagesRef.current.map((msg, index) => (
             <li key={index} className="message">
               <span>{msg.user}:</span> {msg.text}
             </li>
           ))}
         </ul>
         <input
+          id="new-msg"
           type="text"
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
           placeholder="Type a message..."
         />
-        <button onClick={handleSendMessage}>Send</button>
+        <button onClick={sendMessage}>Send</button>
       </div>
     </div>
   );

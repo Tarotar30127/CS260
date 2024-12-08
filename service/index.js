@@ -2,8 +2,10 @@ const cookieParser = require('cookie-parser');
 const argon2 = require('argon2');
 const express = require('express');
 const app = express();
-const uuid = require('uuid');
 const DB = require('./database.js');
+const { userWebsoc } = require('./chatwebsocket.js');
+
+console.log(userWebsoc)
 
 const authCookieName = 'token';
 
@@ -46,11 +48,14 @@ apiRouter.post('/auth/create', async (req, res) => {
 apiRouter.post('/auth/login', async (req, res) => {
   const user = await DB.getUser(req.body.email);
   if (user) {
-    if (await argon2.compare(req.body.password, user.password)) {
+    console.log("User Exists")
+    if (await argon2.verify(user.password, req.body.password)) {
+      console.log("passwords match")
       setAuthCookie(res, user.token);
       res.send({ id: user._id });
       return;
     }
+    else console.log("passwords don't match")
   }
   res.status(401).send({ msg: 'Unauthorized' });
 });
@@ -58,6 +63,7 @@ apiRouter.post('/auth/login', async (req, res) => {
 // DeleteAuth token if stored in cookie
 apiRouter.delete('/auth/logout', (_req, res) => {
   res.clearCookie(authCookieName);
+  console.log("user logged out")
   res.status(204).end();
 });
 
@@ -121,21 +127,6 @@ secureApiRouter.post('/jobs', async (req, res) => {
   }
 });
 
-// Chat Routes
-secureApiRouter.get('/chat', (_req, res) => {
-  res.json(chatMessages);
-});
-
-secureApiRouter.post('/chat', (req, res) => {
-  const { user, text } = req.body;
-  if (!user || !text) {
-    return res.status(400).json({ msg: 'Missing required fields' });
-  }
-  const newMessage = { id: uuid.v4(), user, text, timestamp: new Date() };
-  chatMessages.push(newMessage);
-  res.status(201).json(newMessage);
-});
-
 // Default error handler
 app.use((err, req, res, next) => {
   res.status(500).send({ type: err.name, message: err.message });
@@ -151,10 +142,12 @@ function setAuthCookie(res, authToken) {
   res.cookie(authCookieName, authToken, {
     secure: true,
     httpOnly: true,
-    sameSite: 'strict',
+    sameSite: 'None',
   });
 }
 
-const httpService = app.listen(port, () => {
+const httpServices = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+userWebsoc(httpServices);

@@ -33,8 +33,7 @@ function getUserByToken(token) {
 
 async function createUser(email, password) {
   // Hash the password before we insert it into the database
-  const passwordHash = await argon2.hash(password, 10);
-
+  const passwordHash = await argon2.hash(password);
   const user = {
     email: email,
     password: passwordHash,

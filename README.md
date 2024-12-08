@@ -137,7 +137,7 @@ I am going to use the required technologies in the following ways.
 
 ## WebSocket deliverable
 
-- [ ] **Backend listens for WebSocket connection** 
-- [ ] **Frontend makes WebSocket connection** 
-- [ ] **Data sent over WebSocket connection** 
-- [ ] **WebSocket data displayed** 
+- [x] **Backend listens for WebSocket connection** The backend listens for incoming WebSocket connections on a specified route (/ws), accepting requests from clients to establish real-time communication. It ensures messages are received and broadcasted to all connected clients for the chat functionality.
+- [x] **Frontend makes WebSocket connection** The frontend creates a WebSocket connection to the server using the appropriate protocol (ws or wss), allowing for bidirectional communication. This connection powers the real-time chat, enabling users to exchange messages instantly.
+- [x] **Data sent over WebSocket connection** Once the WebSocket connection is established, the frontend sends data, such as user messages, to the backend using socket.send(), which is then broadcasted to other clients. This allows every participant in the chat to see the messages in real time.
+- [x] **WebSocket data displayed** Upon receiving WebSocket data, the frontend displays it in the chat interface, updating the UI by appending the incoming message to the message list. The messages are styled and displayed with the sender's name for clarity.
